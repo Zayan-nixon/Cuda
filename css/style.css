@@ -1,0 +1,403 @@
+/*......reusable part.....*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 85px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+/*......nav  part.....*/
+.navbar-nav li {
+    margin-left: 20px !important;
+}
+
+.navbar-nav li a {
+    color: #fff;
+    border-radius: 3px;
+    padding: 8px 22px;
+	border-radius: 3px;
+    transition: .5s !important;
+}
+
+.navbar-nav li a:hover {
+    background-color: #643A79;
+}
+.navbar-nav li.active a {
+	background-color: #643A79;
+}
+.mobile-menu span i {
+    cursor: pointer !important;
+    display: none;
+    font-size: 30px;
+}
+
+.overlay {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000de;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay-content a {
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    letter-spacing: .30px;
+    color: #999;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.overlay-content a:hover {
+    color: #fff;
+}
+.overlay-content a.active{
+	color:#fff;
+}
+
+.closebtn {
+    color: #999;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #fff
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #87509CE3;
+    padding: 5px 55px !important;
+    box-shadow: 0 3px 0 #ffffffa3;
+    z-index: 9999;
+    padding: 0 50px;
+}
+
+.sticky.logo {
+    margin: 0;
+    margin-top: 2px;
+}
+
+.sticky.main-menu {
+    margin-top: 2px;
+}
+
+
+
+
+
+/*......Header part.....*/
+#header {
+    background-image: linear-gradient(#87509CDE, #87509CDE), url('img/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+    text-align: center;
+}
+
+#header h1 {
+    margin-top: 180px;
+}
+
+#header .btn {
+    background-color: #EB7D4B;
+    border-color: #C86A40;
+}
+
+
+
+
+
+
+/*......service part.....*/
+#service {
+    background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)), url('img/services-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+#service h2::after {
+    background: #14A58C;
+}
+
+#service img {
+    height: 100px;
+}
+
+
+
+
+
+/*......work part.....*/
+#work {
+	background:linear-gradient(rgba(231,241,248,0.8),rgba(231,241,248,0.8)),url('img/team-bg.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center top;
+	background-attachment:fixed;
+}
+#work h2::after {
+    background: #C8D9E5;
+}
+
+#work .social-link ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#work .social-link ul {
+    padding-left: 0 !important;
+}
+
+#work .social-link ul li a {
+    color: #fff;
+}
+
+#work .social-link ul li a i {
+    background: #BDD1DF;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px;
+    transition: .5s;
+}
+
+#work .social-link ul li a:hover i {
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+#work span {
+    color: #3CBEE8;
+}
+
+
+
+
+/*......skill part.....*/
+#skill {
+    color: #3C4761;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(img/skill-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#skill h2::after {
+    background: #DFE8ED;
+}
+
+
+
+
+
+/*......Animated circle part.....*/
+svg.radial-progress {
+    height: auto;
+    max-width: 200px;
+    padding: 1em;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 100%;
+}
+
+svg.radial-progress circle {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129;
+    stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete {
+    opacity: 0.25;
+}
+
+svg.radial-progress circle.complete {
+    stroke-dasharray: 219.91148575129;
+}
+
+svg.radial-progress text {
+    fill: #fff;
+    text-anchor: middle;
+}
+
+#skill svg.radial-progress circle {
+    stroke-width: 6;
+}
+
+#skill svg.radial-progress text {
+    fill: #3C4761;
+    font-size: 1.5rem;
+}
+
+#skill svg.web-design circle {
+    stroke: #30BAE7;
+}
+
+#skill svg.html-css circle {
+    stroke: #D74680;
+}
+
+#skill svg.graphic-design circle {
+    stroke: #15C7A8;
+}
+
+#skill svg.ui-ux circle {
+    stroke: #EB7D4B;
+}
+
+
+
+
+
+/*......Portfolio part.....*/
+#portfolio {
+    background: linear-gradient(rgba(229, 195, 127, 0.9), rgba(229, 195, 127, 0.9)), url(img/portfolio-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #393939;
+    text-align: center;
+}
+
+.portfolio-filter button {
+    background: #F7A40057;
+    font-size: 20px;
+    padding: 8px 18px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 5px 50px 5px;
+    transition: .5s;
+}
+
+.portfolio-filter button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 3px 5px #000000d1
+}
+
+#portfolio .mixitup-control-active {
+    background: #fff;
+}
+
+#portfolio h2::after {
+    background: #E5C37F;
+}
+
+#testimonial {
+    background: linear-gradient(rgba(215, 70, 128, 0.9), rgba(215, 70, 128, 0.9)), url(img/testimonial-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#testimonial h2::after {
+    background: #B73C6D;
+}
+
+#testimonial span {
+    color: #EC978D;
+}
+
+#contact {
+    background: linear-gradient(rgba(60, 84, 153, 0.9), rgba(60, 84, 153, 0.9)), url(img/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#contact h2::after {
+    background: #273A71;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    background: #273A71;
+    border: .10px solid #273A71;
+    font-size: 18px;
+    color: #fff;
+}
+
+#contact form ::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+#contact .btn {
+    box-shadow: 4px 4px #147595;
+}
+
+footer {
+    background: #344B8E;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none !important;
+    color: #fff !important;
+    padding: 18px 30px;
+    font-size: 20px;
+}
+
+footer a:first-child {
+    padding-left: 0;
+}
+
+footer a:last-child {
+    padding-right: 0;
+}
+
+footer a:hover {
+    color: #30BAE7 !important;
+}
+
+@media(max-width:991px) {
+    .mobile-menu span i {
+        display: block;
+    }
+}
+
+@media(max-width:768px) {
+    #header h1 {
+        margin-top: 50px;
+    }
+}
